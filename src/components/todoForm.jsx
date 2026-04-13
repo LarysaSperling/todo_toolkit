@@ -38,12 +38,14 @@ export default function TodoForm() {
         value={text}
         onChange={(e) => setText(e.target.value)}
         variant="outlined"
-        size="small"
+        size="medium"
         sx={{
-          mb: 1.5,
+          mb: 2,
           backgroundColor: '#fff',
           '& .MuiOutlinedInput-root': {
-            borderRadius: '2px',
+            borderRadius: '6px',
+            height: '56px',
+            fontSize: '16px',
           },
         }}
       />
@@ -57,8 +59,10 @@ export default function TodoForm() {
           color: '#fff',
           textTransform: 'none',
           fontWeight: 600,
+          height: '50px', 
+          fontSize: '16px',
           boxShadow: 'none',
-          borderRadius: '2px',
+          borderRadius: '6px',
           '&:hover': {
             backgroundColor: '#218838',
             boxShadow: 'none',
