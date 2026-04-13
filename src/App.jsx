@@ -1,4 +1,37 @@
+import React from 'react';
+import { Box, Container, Paper } from '@mui/material';
+import TodoForm from './components/todoForm';
+import TodoList from './components/todoList';
 
+export default function App() {
+  return (
+    <Box
+      sx={{
+        minHeight: '100vh',
+        backgroundColor: '#1f1f1f',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        py: 4,
+      }}
+    >
+      <Container maxWidth="md">
+        <Paper
+          elevation={0}
+          sx={{
+            backgroundColor: '#f5f5f5',
+            border: '1px solid #d6d6d6',
+            px: 2,
+            py: 2,
+          }}
+        >
+          <TodoForm />
+          <TodoList />
+        </Paper>
+      </Container>
+    </Box>
+  );
+}
 
 
 
