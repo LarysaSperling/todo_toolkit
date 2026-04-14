@@ -32,24 +32,26 @@ export default function TodoForm() {
         mb: 2,
       }}
     >
-      <TextField
-        fullWidth
-        placeholder="Enter new todo"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        variant="outlined"
-        size="medium"
-        sx={{
-          mb: 2,
-          backgroundColor: '#fff',
-          '& .MuiOutlinedInput-root': {
-            borderRadius: '6px',
-            height: '56px',
-            fontSize: '16px',
-          },
-        }}
-      />
-
+     <TextField
+  fullWidth
+  placeholder="Enter new todo"
+  value={text}
+  onChange={(e) => setText(e.target.value)}
+  variant="outlined"
+  size="medium"
+  sx={{
+    mb: 2,
+    backgroundColor: '#fff',
+    '& .MuiOutlinedInput-root': {
+      borderRadius: '6px',
+      height: '64px',
+    },
+    '& .MuiOutlinedInput-input': {
+      padding: '18px 16px',
+      fontSize: '16px',
+    },
+  }}
+/>
       <Button
         type="submit"
         fullWidth
