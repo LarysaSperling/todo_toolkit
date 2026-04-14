@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Box, Paper, Typography, Button } from '@mui/material';
-import TodoItem from './TodoItem';
+import TodoItem from './todoItem';
 import { clearCompleted } from '../redux/slices/todosSlice';
 
 export default function TodoList({ filter, setFilter }) {
