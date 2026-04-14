@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Container, Paper } from '@mui/material';
 import TodoForm from './components/todoForm';
 import TodoList from './components/todoList';
+import TodoFilter from './components/todoFilter';
 
 export default function App() {
+  const [filter, setFilter] = useState('all');
+
   return (
     <Box
       sx={{
@@ -12,21 +15,23 @@ export default function App() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        py: 4,
+        py: { xs: 2, sm: 4 },
+        px: { xs: 1, sm: 2 },
       }}
     >
-      <Container maxWidth="md">
+      <Container maxWidth="lg" sx={{ px: { xs: 0, sm: 2 } }}>
         <Paper
           elevation={0}
           sx={{
             backgroundColor: '#f5f5f5',
             border: '1px solid #d6d6d6',
-            px: 2,
-            py: 2,
+            px: { xs: 1.5, sm: 2 },
+            py: { xs: 1.5, sm: 2 },
+            width: '100%',
           }}
         >
           <TodoForm />
-          <TodoList />
+          <TodoList filter={filter} setFilter={setFilter} />
         </Paper>
       </Container>
     </Box>
